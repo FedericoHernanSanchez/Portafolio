@@ -1,11 +1,1358 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Cards from "../components/Cards.astro";
+import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+
 ---
 
 <Layout>
-	<Welcome />
+	<main>
+		<header class="header">
+    <button class="navbar-burger">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="menu">
+        <nav class="navbar">
+            <a class="a" href="#" >
+                <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z"></path>
+                    <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z"></path>
+                </svg>
+                <span class="link">Inicio</span>
+            </a>
+            <a class="a" href="#sobreMi">
+                <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="link">Sobre mí</span>
+            </a>
+            <a class="a" href="#tecnologia">
+                <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z"></path>
+                    <path d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z"></path>
+                    <path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z"></path>
+                </svg>
+                <span class="link">Tecnologías</span>
+            </a>
+            <a class="a" href="#proyectos">
+                <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd" d="M14.447 3.026a.75.75 0 0 1 .527.921l-4.5 16.5a.75.75 0 0 1-1.448-.394l4.5-16.5a.75.75 0 0 1 .921-.527ZM16.72 6.22a.75.75 0 0 1 1.06 0l5.25 5.25a.75.75 0 0 1 0 1.06l-5.25 5.25a.75.75 0 1 1-1.06-1.06L21.44 12l-4.72-4.72a.75.75 0 0 1 0-1.06Zm-9.44 0a.75.75 0 0 1 0 1.06L2.56 12l4.72 4.72a.75.75 0 0 1-1.06 1.06L.97 12.53a.75.75 0 0 1 0-1.06l5.25-5.25a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="link">Proyectos</span>
+            </a>
+            <a class="a" href="#contacto">
+                <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z"></path>
+                </svg>
+                <span class="link">Contacto</span>
+            </a>
+            <div class="buttons-social">
+                <a href="https://github.com/FedericoHernanSanchez" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/federico-hernan-sanchez-842b24214/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+		<section class="hero">
+			<div class="background">
+				
+				<div class="container-title">
+					<span>Bienvenido, soy Federico Hernan</span>
+					<h1>FrontEnd</h1>
+					<h2>Developer</h2>
+					<div class="buttons-social">
+						<a
+							href="https://github.com/FedericoHernanSanchez"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<i class="fa-brands fa-github"></i>
+						</a>
+						<a
+							href="https://www.linkedin.com/in/federico-hernan-sanchez-842b24214/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<i class="fa-brands fa-linkedin-in"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<script>
+				if (document) {
+					const menuIcon = document.querySelector(".header i");
+					const menu = document.querySelector(".menu");
+					const menuLinks = document.querySelectorAll(".menu .a");
+			
+					// Función para abrir/cerrar el menú
+					menuIcon?.addEventListener("click", function () {
+						if (menu) {
+							const isMenuOpen = (menu as HTMLElement).style.display === "flex";
+							(menu as HTMLElement).style.display = isMenuOpen ? "none" : "flex";
+							document.body.style.overflow = isMenuOpen ? "auto" : "hidden"; // Alterna el scroll
+						}
+					});
+			
+					// Función para cerrar el menú en móvil al hacer clic en un enlace
+					menuLinks.forEach(link => {
+						link.addEventListener("click", function () {
+							if (window.innerWidth < 950) { 
+								if (menu) {
+									(menu as HTMLElement).style.display = "none";
+								}
+								document.body.style.overflow = "auto"; // Restablece el scroll
+							}
+						});
+					});
+
+					// Evento para detectar el cambio de tamaño de pantalla
+					window.addEventListener("resize", function () {
+						if (window.innerWidth > 950) {
+							if (menu) {
+								(menu as HTMLElement).style.display = "flex"; // Mostrar el menú en pantallas grandes
+							}
+							document.body.style.overflow = "auto"; // Restablece el scroll
+						} else {
+							if (menu) {
+								(menu as HTMLElement).style.display = "none"; // Ocultar el menú en móvil
+							}
+						}
+					});
+				}
+			</script>
+		</section>
+
+		<section id="sobreMi" class="sobre-mi">
+			<h2>Sobre mí</h2>
+			<div class="about-me-container">
+				<div class="about-me-img">
+					<img
+						src="images/about-me.png"
+						alt="foto-perfil"
+						loading="lazy"
+					/>
+				</div>
+				<div class="about-me-text">
+					<h3>Hola, soy Federico</h3>
+					<p>
+						Soy un apasionado de la programación y los videojuegos.
+						Me considero una persona que siempre da lo mejor de sí
+						en todo lo que hace, con una gran capacidad para
+						trabajar en equipo y alcanzar objetivos comunes.
+					</p>
+					<p>
+						Finalicé el curso de <span class="tecnica"
+							>Full Stack Node.js en Codo a Codo 4.0</span
+						> y actualmente estoy cursando la Licenciatura en
+						<span class="tecnica"
+							>Informática en la Universidad Nacional de Quilmes</span
+						>. Sigo aprendiendo constantemente a través de cursos y
+						de forma autodidacta para mejorar mis habilidades y
+						seguir creciendo como profesional.
+					</p>
+				</div>
+			</div>
+			<div class="cv-container">
+				<p>
+					Si estas interesado en saber más sobre mi puedes descargar
+					mi Curriculum Vitae
+				</p>
+				<a
+					href="/CV-Federico-Hernan-Sanchez.pdf"
+					download="CV-Federico-Hernan-Sanchez.pdf"
+				>
+					<i class="fa-solid fa-cloud-arrow-down"></i>
+					<span>Descargar CV</span>
+				</a>
+			</div>
+		</section>
+
+		<section id="tecnologia" class="tecnologias">
+			<div class="technology-container">
+				<div class="technology-text">
+					<h2>Tecnologías</h2>
+					<p>
+						Mi área principal de especialización es el desarrollo
+						Frontend pero mi formación es FullStack.
+					</p>
+					<p>
+						HTML, CSS, JS, creación de aplicaciones web pequeñas y
+						medianas con React y Node.js y codificación de diseños
+						interactivos.
+					</p>
+				</div>
+				<div class="technology-carrousel">
+					<div class="carrousel-container">
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/html.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>HTML</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/css.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>CSS</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/js.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>Javascript</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/typescript.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>TypeScript</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/react.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>React</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/node-js.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>Node.js</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/astro.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>Astro</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/mysql.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>MySql</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/postman.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>Postman</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/github.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>Github</p>
+						</div>
+
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/html.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>HTML</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/css.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>CSS</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/js.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>Javascript</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/typescript.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>TypeScript</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/react.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>React</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/node-js.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>Node.js</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/astro.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>Astro</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/mysql.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>MySql</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/postman.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>Postman</p>
+						</div>
+						<div class="icon-container">
+							<div class="icon">
+								<img
+									src="images/tecnologias/github.png"
+									width="45px"
+									alt=""
+								/>
+							</div>
+							<p>Github</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="proyectos" class="proyectos">
+			<div class="proyectos-container">
+				<div class="title container">
+					<h2>Proyectos</h2>
+				</div>
+				<Cards tipo="proyect" />
+			</div>
+		</section>
+
+		<section id="contacto" class="contacto">
+			<div class="contact-container">
+				<h2>Contacto</h2>
+				<form
+					class="form-container"
+					id="contactForm"
+					method="POST"
+					action="https://formspree.io/f/xovjyagw"
+				>
+				<div class="form-group">
+					<label class="label" for="name">Nombre y Apellido</label>
+					<input
+						class="input"
+						type="text"
+						placeholder="Nombre y Apellido"
+						name="name"
+						id="name"
+						required
+					/>
+				</div>
+				<div class="form-group">
+					<label class="label" for="email">Email</label>
+					<input
+						class="input"
+						type="text"
+						placeholder="example@gmail.com"
+						name="email"
+						id="email"
+						required
+					/>
+				</div>
+				<div class="form-group">
+					<label class="label" for="message">Mensaje</label>
+					<textarea
+						class="textarea"
+						name="message"
+						placeholder="Escriba su mensaje aqui"
+						id="message"
+						required></textarea>
+				</div>
+					<button class="form-buttom" type="submit">Enviar</button>
+				</form>
+			<!--Modal -->
+			<div class="modal">
+				<div class="modal-content">
+					<span id="closeModal" class="close">×</span>
+					<p>Mensaje enviado! Me pondre en contacto a la brevedad.</p>
+					<span class="text">Muchas Gracias!</span>
+				</div>
+			</div>
+		</div>
+		<script>
+			document.addEventListener("DOMContentLoaded",function(){
+				const form = document.getElementById("contactForm");
+				const modal = document.querySelector(".modal");
+				const modalMessage = document.querySelector(".modal-content p");
+				const closeModal = document.getElementById("closeModal");
+
+				form?.addEventListener("submit",async function(event){
+					event.preventDefault();
+					const formData = new FormData(form as HTMLFormElement);
+
+					try{
+						const response = await fetch((form as HTMLFormElement).action,{
+							method: "POST",
+							body: formData,
+							headers: {
+								Accept: "application/json",
+							},
+						});
+						if(response.ok){
+							const data = await response.json();
+							if (modalMessage) {
+								modalMessage.textContent = data.message || "Mensaje enviado! Me pondré en contacto a la brevedad.";
+							}
+							if (modal) {
+								(modal as HTMLElement).style.display = "block";
+							}
+							(form as HTMLFormElement).reset();
+						}else{
+							if (modalMessage) {
+								modalMessage.textContent = "Error al enviar el mensaje. Por favor, intenta nuevamente."
+							}
+						}
+					}catch(error){
+						if (modalMessage) {
+							modalMessage.textContent = "Error al enviar el mensaje,Por favor, intentelo de nuevo mas tarde";
+						}
+					}
+					if (modal) {
+						(modal as HTMLElement).style.display = "flex";
+					}
+				});
+				closeModal?.addEventListener("click",function(){
+					if (modal) {
+						(modal as HTMLElement).style.display = "none";
+					}
+				});
+			});
+		</script>
+		</section>
+	</main>
 </Layout>
+	<footer class="footer">
+		<div class="footer-container">
+			<div class="content-footer">
+				<div class="despedida">
+					<h1>Federico Hernan Sanchez</h1>
+					<span>Front End Developer</span>
+				</div>
+				<div class="enlaces">
+					<ul class="list-enlaces">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#sobreMi">Sobre mí</a></li>
+						<li><a href="#tecnologia">Tecnologías</a></li>
+						<li><a href="#proyectos">Proyectos</a></li>
+						<li><a href="#contacto">Contacto</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="derechos">
+				<p><span>© 2025 </span>Federico Hernan Sanchez.</p>
+			</div>
+		</div>
+	</footer>
+
+<style>
+	
+	/*Header*/
+
+	.header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		position: absolute;
+		z-index: 103;
+	}
+
+	.navbar-burger{
+		display: none;
+	}
+
+	.menu{
+        position: fixed;
+		display: flex;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        background: #13151a59;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(px);
+        box-shadow: 0 4px 6px #000000b3;
+        border-radius: 10px;
+        margin-top: 30px;
+		
+    }
+
+	.menu .buttons-social{
+		display: none;
+	}
+	
+
+	.navbar{
+		display: flex;
+		justify-content: center;
+		align-items: center;	
+	}
+
+	.a {
+		color: #fff;
+		font-size: 1.2rem;
+		font-family: "Raleway", serif;
+		font-weight: 600;
+		letter-spacing: 1px;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		position: relative;
+		white-space: nowrap;
+		padding: 15px 17px	
+	}
+
+	.a{
+		position: relative;
+	}
+
+	.a::after{
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -3px;
+		width: 0%;
+		height: 3px;
+		background-color: #667eea;
+		transition: width 0.4s ease-in-out;
+	}
+
+	.a:hover::after {
+		width: 100%;
+	}
+
+	.svg {
+		width: auto;
+		height: 22px;
+		fill: #fff;
+	}
+	
+	@media (max-width:950px){
+		.navbar-burger{
+			display: block;
+			top: 0;
+			left: 0;
+			margin: 30px;
+			text-decoration: none;
+			border: none;
+			border-radius: 50%; 
+    		background: rgba(0, 0, 0, 0.6); 
+    		backdrop-filter: blur(8px); 
+    		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+			color: #fff;
+			background: none;
+			cursor: pointer;
+			z-index: 104;
+			position: fixed;
+			font-size: 25px;
+			background-color: #000000c4;
+			width: 60px; 
+    		height: 60px;
+		}
+
+		.menu{
+			top: 0;
+			margin: 0px;
+			place-items: center;
+			width: 100%;
+			height: 100%;
+			background-image: url("images/background.png");
+			background-position: center;
+			background-size: cover;
+			transition: .5s;
+			justify-content: center;
+			align-items: center;
+			display: none;
+		}
+
+		.menu::before {
+    		content: "";
+   			position: absolute;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+    		height: 100%;
+    		background-color: rgba(0, 0, 0, 0.5); /* Ajusta el nivel de oscuridad */
+		}
+
+		.navbar{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			padding: 70px 30px;
+		
+		}
+
+		.menu .buttons-social{
+			display: flex;
+			padding-top: 20px;
+			z-index: 105;
+		}
+
+		.a {
+			width: 100%;
+			transition: .4s;
+			padding: 15px 0px;
+			font-size: 1.3rem;
+		}
+
+		.svg {
+			width: auto;
+			height: 30px;
+			fill: #fff;	
+		}
+	}
+	
+	/*Hero*/
+	
+	.hero {
+		position: relative;
+    	width: 100%;
+    	height: 100vh;
+	}
+
+	.background {
+		display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	justify-content: center;
+    	text-align: center;
+    	overflow: hidden;
+    	position: relative;
+    	background-attachment: fixed;
+    	width: 100%;
+    	height: 100vh;
+    	background-image: url("images/background.png");
+    	background-size: cover;
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	right: 0;
+    	left: 0;
+    	top: 0;
+	}
+
+	.container-title{
+		display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	justify-content: center;
+    	text-align: center;
+    	position: relative;
+    	z-index: 1;
+    	padding: 10px;
+	}
+
+	.container-title span {
+		font-weight: 600;
+		font-size: 1.3rem;
+		font-family: "Raleway", serif;
+		color: #fff;
+	}
+
+	.container-title h1 {
+		font-size: 7.5rem;
+		margin: 15px 0px;
+		font-family: "Raleway", serif;
+		font-weight: 800;
+		background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.container-title h2 {
+		font-size: 3.3rem;
+		font-family: "Raleway", serif;
+		color: #fff;
+		margin-top: 0;
+		font-weight: 800;
+	}
+
+	.buttons-social {
+		display: flex;
+		gap: 30px;
+	}
+
+	.buttons-social a {
+		background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		text-decoration: none;
+		cursor: pointer;
+		color: #fff;
+		width: 55px;
+		height: 55px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		font-size: 30px;
+		transition: transform .3s ease;
+	}
+
+	.buttons-social a:hover {
+		transform: scale(1.1);
+	}
+
+	@media (max-width:900px){
+		.container-title h1 {
+		font-size: 5rem;
+		}
+	}
+
+	@media (max-width:500px){
+		.container-title h1 {
+		font-size: 4rem;
+		}
+
+		.container-title h2 {
+		font-size: 2rem;
+		}
+
+		.container-title span {
+		font-size: 1.1rem;	
+		}
+	}
+
+	/*About me*/
+
+	.sobre-mi {
+		display: flex;
+		flex-direction: column;
+		max-width: 950px;
+		margin: 0 auto 50px;
+		padding: 60px 30px;
+		box-sizing: border-box;
+	}
+
+	.sobre-mi h2 {
+		font-size: 2.5rem;
+		padding: 20px 0 10px;
+		display: inline-block;
+		position: relative;
+		color: #fff;
+		margin: 30px 0;
+		font-family: "Raleway", serif;
+	}
+
+	.sobre-mi h2::after {
+		content: "";
+		position: absolute;
+		bottom: 0.8px;
+		left: 0;
+		width: 8%;
+		border-bottom: 4px solid #667eea;
+		white-space: nowrap;
+	}
+
+	.about-me-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 100px;
+	}
+
+	@media (max-width: 750px) {
+		.about-me-container {
+			flex-direction: column;
+			gap: 30px;
+		}
+	}
+
+	.about-me-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.about-me-img img {
+		width: 250px;
+		height: 250px;
+	}
+
+	
+	.about-me-text {
+		color: #fff;
+		font-size: 1rem;
+		font-family: "Raleway", serif;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		line-height: 1.8;
+		width: 50%;
+	}
+
+	.tecnica {
+		color: #95a7f5;
+	}
+
+	.about-me-text h3 {
+		margin: 0px;
+		font-size: 1.4rem;
+		color: #9364c2;
+	}
+
+	.cv-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 15px;
+		padding: 20px 0 0;
+	}
+
+	.cv-container p {
+		color: #fff;
+		font-size: 1.1rem;
+		font-family: "Raleway", serif;
+	}
+
+	.cv-container a {
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 17px;
+		padding: 0.8em 1.5em 0.8em 1.2em;
+		color: #fff;
+		background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		border-radius: 20em;
+		cursor: pointer;
+		text-decoration: none;
+		font-family: "Raleway", serif;
+		gap: 10px;
+	}
+
+	.cv-container a:hover {
+		box-shadow: 0px 6px 15px rgba(161, 43, 197, 0.5);
+	}
+
+	@media (max-width: 750px) {
+		.about-me-img img {
+			width: 220px;
+			height: 220px;
+		}
+
+		.about-me-text {
+			width: 100%;
+		}
+
+		.cv-container {
+			text-align: center;
+		}
+	}
+
+	/*Tecnologias*/
+
+	.tecnologias {
+		max-width: 950px;
+		margin: 0 auto 50px;
+		padding: 60px 30px;
+		box-sizing: border-box;
+	}
+
+	.technology-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.technology-container h2 {
+		position: relative;
+		color: #fff;
+		font-family: "Raleway", serif;
+		font-size: 2.5rem;
+		padding: 20px 0 10px;
+		display: inline-block;
+	}
+
+	.technology-container h2::after {
+		position: absolute;
+		content: "";
+		left: 0;
+		width: 35%;
+		bottom: 0.8px;
+		border-bottom: 4px solid #667eea;
+		white-space: nowrap;
+	}
+
+	.technology-text {
+		font-family: "Raleway", serif;
+		text-align: center;
+	}
+
+	.technology-text p {
+		font-size: 1.1rem;
+		line-height: 1.6;
+		text-align: center;
+		color: #fff;
+	}
+
+	.technology-carrousel {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		max-width: 600px;
+		overflow: hidden;
+		padding: 20px 0px;
+	}
+
+	.carrousel-container {
+		display: flex;
+		flex-direction: row;
+		gap: 60px;
+		white-space: nowrap;
+		width: max-content; /*  Hace que los elementos se alineen bien */
+		animation: slide 11s linear infinite;
+	}
+
+	.icon-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		width: 40px;
+		margin: 10px;
+	}
+
+	.icon-container p {
+		font-family: "Raleway", serif;
+		color: #fff;
+		font-size: 12px;
+		margin-top: 15px;
+	}
+
+	/* Animación infinita sin cortes */
+	@keyframes slide {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-51%);
+		}
+	}
+
+	/* Proyectos*/
+
+	.proyectos {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 1100px;
+		margin: 0 auto 50px;
+	}
+
+	.proyectos-container {
+		width: 90%;
+		max-width: 1900px;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 20px;
+	}
+
+	.proyectos-container h2 {
+		position: relative;
+		color: #fff;
+		font-family: "Raleway", serif;
+		font-size: 2.5rem;
+		padding: 20px 0 10px;
+		display: inline-block;
+	}
+
+	.proyectos-container h2::after {
+		position: absolute;
+		content: "";
+		left: 0;
+		width: 35%;
+		bottom: 0.8px;
+		border-bottom: 4px solid #667eea;
+		white-space: nowrap;
+	}
+
+	/*Contacto*/
+
+	.contacto {
+		max-width: 950px;
+		margin: 0 auto 50px;
+		padding: 60px 30px;
+	}
+
+	.contact-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contact-container h2 {
+		position: relative;
+		color: #fff;
+		font-family: "Raleway", serif;
+		font-size: 2.5rem;
+		padding: 20px 0 10px;
+		display: inline-block;
+	}
+
+	.contact-container h2::after {
+		position: absolute;
+		content: "";
+		left: 0;
+		width: 30%;
+		bottom: 0.8px;
+		border-bottom: 4px solid #667eea;
+		white-space: nowrap;
+	}
+
+	.form-container {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		width: 50%;
+	}
+
+	.form-group {
+		display: flex;
+		flex-direction: column;
+		padding: 20px 10px;
+		font-family: "Raleway", serif;
+	}
+
+	.label {
+		font-size: 1.1rem;
+		color: #fff;
+		padding-bottom: 5px;
+	}
+
+	.input {
+		padding: 10px;
+		border: 1px solid #414141;
+		border-radius: 5px;
+		background-color: transparent;
+		outline: none;
+		color: #fff;
+	}
+
+	.input:focus {
+		border-top: none;
+		border-color: #764ba2; /* Cambia el color del borde cuando el input está enfocado */
+	}
+
+	.textarea {
+		padding: 10px;
+		border: 1px solid #414141;
+		border-radius: 5px;
+		background-color: transparent;
+		color: #fff;
+		height: 150px;
+		outline: none;
+		resize: none;
+	}
+
+	.textarea:focus {
+		border-top: none;
+		border-color: #764ba2; /* Cambia el color del borde cuando el input está enfocado */
+	}
+
+	.form-buttom {
+		padding: 10px;
+		background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		width: 250px;
+		display: block; 
+		margin: 10px auto; 
+		color: #fff;
+		border: none;
+		font-size: 1.1rem;
+		font-weight: 600;
+		border-radius: 4px;
+		cursor: pointer;
+		transition:
+			transform 0.3s ease,
+			background-image 0.3s ease;
+	}
+
+	.form-buttom:hover {
+		transform: scale(1.1); 
+	}
+
+	.modal {
+    	display: none; 
+    	position: fixed;
+    	z-index: 1000;
+    	left: 0;
+    	top: 0;
+    	width: 100%;
+    	height: 100%;
+    	background-color: rgba(0, 0, 0, 0.5); 
+    	justify-content: center;
+    	align-items: center;
+	}
+
+	.modal-content {
+    	background: white;
+    	padding: 27px 20px;
+		letter-spacing: 0.5px;
+    	border-radius: 5px;
+    	text-align: center;
+    	width: 300px; 
+    	position: relative;
+		font-family: "Raleway", serif;
+	}
+
+	.close {
+    	position: absolute;
+    	top: -10px;
+    	left: 10px; 
+    	font-size:40px;
+		color: #764ba2;
+    	cursor: pointer;
+	}
+
+	.text{
+		color: #764ba2;
+		font-weight: 600;
+	}
+
+	@media (max-width: 950px) {
+		.form-container {
+		width: 70%;
+		}
+	}
+
+	@media (max-width:750px){
+		.form-container {
+			width: 100%;
+		}
+
+		.form-buttom{
+			width: 200px;
+		}
+		}
+
+	@media (max-width: 500px) {
+		.modal-content{
+			width: 250px; 
+		}
+	}
+
+	/*Footer*/
+
+	.footer {
+		background-color: #fff;
+	}
+
+	.footer-container {
+		max-width: 1050px;
+		margin: 0 auto;
+		padding: 50px 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.content-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.despedida {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-family: "Raleway", serif;
+	}
+
+	.despedida span {
+		font-size: 1.3rem;
+		font-weight: 600;
+	}
+
+	.despedida h1 {
+		background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-size: 2rem;
+		font-weight: 800;
+	}
+
+	.enlaces {
+		display: flex;
+		justify-content: center;
+	}
+
+	.list-enlaces {
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		font-family: "Raleway", serif;
+		justify-content: center;
+		margin-top: 30px;
+		margin-bottom: 0px;
+		padding: 0px;
+	}
+
+	.list-enlaces li {
+		width: 30%; /* Los tres primeros ocupan un tercio de la fila */
+		text-align: center;
+		margin-bottom: 15px;
+	}
+
+	.list-enlaces a {
+		position: relative;
+		text-decoration: none;
+		font-size: 1.2rem;
+		background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: 600;
+	}
+
+	.list-enlaces a::after {
+		position: absolute;
+		content: "";
+		left: 0;
+		bottom: -4px;
+		width: 0%;
+		height: 1px;
+		background-color: #667eea;
+		transition: width 0.4s ease-in-out;
+	}
+
+	.list-enlaces a:hover::after {
+		width: 100%;
+	}
+	.derechos {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.2rem;
+	}
+
+	.derechos p {
+		font-family: "Raleway", serif;
+		font-weight: 400;
+	}
+
+	.derechos span {
+		font-weight: 600;
+		background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		margin-right: 10px;
+	}
+
+	@media (max-width: 850px) {
+		.content-footer {
+		flex-direction: column;
+		gap: 25px;
+		}
+	}
+
+	
+	@media (max-width: 450px) {
+		.despedida span {
+		font-size: 1rem;
+	}
+
+	.despedida h1 {
+		font-size: 1.3rem;
+	}
+
+	.derechos {
+		font-size: 1rem;
+	}
+
+	.list-enlaces li {
+		width: 100%; /* Los tres primeros ocupan un tercio de la fila */
+	}
+}
+
+</style>
