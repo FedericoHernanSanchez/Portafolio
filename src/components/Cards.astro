@@ -1,0 +1,48 @@
+---
+import CardComponent from "./Card-component.astro";
+
+const proyects = [
+  {
+    image: "images/proyects/zara.png",
+    title: "Zara : Pagina de ropa",
+    description:
+      "Proyecto final del curso Full Stack JavaScript con Node.js, desarrollado en equipo. Aplicamos todos los conocimientos adquiridos durante la cursada, incluyendo desarrollo backend, frontend y conexión con bases de datos.",
+    technologies: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "MySQL"],
+    repoLink:
+      "https://github.com/FedericoHernanSanchez/CaC-2024-Comision-24131-Grupo-14.git",
+    repoDeploy:
+      "https://federicohernansanchez.github.io/CaC-2024-Comision-24131-Grupo-14/",
+  },
+  {
+    image: "images/proyects/react-proyect.png",
+    title: "Proyecto React",
+    description:
+      "Proyecto final del curso de React.js, donde se trabajó de forma integral con los principales conceptos y herramientas del ecosistema React. Además, se consumieron productos desde una Mock API para simular el funcionamiento de una aplicación real.",
+    technologies: ["HTML", "CSS", "React"],
+    repoLink: "https://github.com/FedericoHernanSanchez/Proyecto.React.git",
+    repoDeploy: "https://react-proyect-23242c.netlify.app/",
+  },
+];
+---
+
+<div class="cards-container">
+  {proyects.map((proyect) => <CardComponent {...proyect} />)}
+</div>
+
+<style>
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 1100px;
+    justify-items: center;
+    place-content: center; /* Es lo mismo que aling content y justify content*/
+    gap: 30px 20px;
+  }
+
+  @media (max-width: 950px) {
+    .cards-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
