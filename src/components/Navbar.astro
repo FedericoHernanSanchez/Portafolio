@@ -1,0 +1,68 @@
+---
+import "../styles/global.css";
+import NavbarElement from "./NavbarElement.astro";
+
+---
+
+<nav class="fixed top-7 left-5 lg:top-14 lg:left-auto z-50 ">
+		<button id="menu-btn" class="block z-50 relative lg:hidden rounded-full bg-white/70 backdrop-blur-3xl shadow-xl p-2 cursor-pointer">
+			<svg class="w-9 h-9 text-fst">
+				<use href="/spriteSVG/sprite.svg#menu"></use>
+			</svg>
+		</button>
+		<ul id="menu" class="hidden fixed bg-[url('/fondo.webp')] flex-col inset-0 items-center justify-center 
+							bg-cover lg:static lg:bg-none lg:flex lg:flex-row">
+			
+			<div class="absolute bg-background/95 inset-0 lg:bg-white/70 lg:backdrop-blur-3xl lg:shadow-xl lg:rounded-lg"></div>
+			<div class="flex flex-col items-start gap-4 lg:flex-row ">
+				<NavbarElement title="Inicio" href="/#inicio" icon="house" />
+				<NavbarElement title="Sobre mi" href="/#about" icon="user"/>
+				<NavbarElement title="Tecnologias" href="/#technologies" icon="study-solid"/>
+				<NavbarElement title="Proyectos" href="/#proyects" icon="code"/>
+				<NavbarElement title="Contacto" href="/#contact" icon="send"/>
+			</div>
+			<div class="flex items-center justify-center gap-5 pt-10 lg:hidden relative" >
+				<a href="https://github.com/FedericoHernanSanchez " target="_blank" class="hover:animate-jump animate-once animate-ease-in"  > 
+					<svg  class="w-13 h-13  ">
+						<use href="/spriteSVG/sprite.svg#github"></use>
+					</svg>
+				</a>
+				<a href="https://www.linkedin.com/in/federico-hernan-sanchez-842b24214/"  target="_blank" class="hover:animate-jump animate-once  animate-ease-in">
+					<svg class="w-13 h-13">
+						<use href="/spriteSVG/sprite.svg#linkedIn"></use>
+					</svg>
+				</a>
+			</div>
+		</ul>
+</nav>
+
+
+<script>
+	document.addEventListener("DOMContentLoaded",() =>{
+		const btn = document.getElementById("menu-btn")
+		const menu = document.getElementById("menu")
+
+		btn?.addEventListener("click",() => {
+			const isOpen = menu?.classList.contains("flex")
+
+			if(isOpen){
+				menu?.classList.add("hidden")
+				menu?.classList.remove("flex");
+				document.body.style.overflow= "";
+			} else{
+				menu?.classList.remove("hidden")
+				menu?.classList.add("flex")
+				document.body.style.overflow = "hidden";
+			}
+		});
+
+		menu?.addEventListener("click",(e) => {
+			const target = e.target as HTMLElement | null;
+			if(target && target.tagName == "A" && window.innerWidth < 1024){
+				menu.classList.add("hidden");
+				menu.classList.remove("flex")
+				document.body.style.overflow = "";
+			}
+		});
+	});
+</script>

@@ -1,0 +1,67 @@
+---
+
+interface Props {
+    image : string,
+    hoverImage : string;
+    title : string,
+    description : string,
+    technologies : string[],
+    githubUrl : string,
+    liveUrl : string,
+    id:string,
+
+}
+
+const {title,image,description,technologies,githubUrl,liveUrl,hoverImage,id} = Astro.props;
+---
+
+
+<div class="font-raleway text-white flex flex-col items-center  gap-4 ">
+    <a href={`/proyects/${id}`} class="block">
+        <div class="flex flex-col gap-3.5 group [perspective:1000px]  cursor-pointer relative w-[300px] sm:w-[400px]">
+            <div class="w-[290px] h-[290px] flex sm:w-[400px] sm:h-[350px] overflow-hidden  transition-transform duration-500 ease-out   
+                    group-hover:[transform:rotateX(22deg)] before:absolute before:inset-0
+                    before:transition before:duration-400
+                 group-hover:before:bg-[rgba(0,0,0,0.3)] ">
+
+                <img src={image} alt="imagen-proyecto" class="w-full h-full object-cover ">
+            </div>
+
+            <img src={hoverImage} alt="logo-proyecto" 
+                class="absolute  left-1/2 top-28 sm:top-40 w-36 h-36 sm:w-56 sm:h-56 object-cover 
+                    -translate-x-1/2 -translate-y-1/2 scale-0 opacity-0 
+                    transition-all duration-500 
+                    group-hover:scale-100 group-hover:opacity-100">
+              
+            <div class="flex flex-col items-center  sm:max-w-[400px] gap-2.5">
+                <h2 class="text-3xl font-bold bg-gradient-to-br from-fst to-snd bg-clip-text text-transparent">{title}</h2>
+                <p class=" text-sm text-center leading-7 sm:text-base ">{description}</p>
+                <div class="flex flex-wrap gap-3 items-center justify-center font-light text-sm">
+                    {
+                    technologies.map((tech =>(
+                        <p class="shadow-[0_2px_2px_var(--color-snd)] rounded-lg p-2 ">{tech}</p>
+                    )))
+                    }
+                </div>
+                <span class="font-extralight text-xl  flash-text mt-4 c  ">Ver más</span>
+            </div>
+        </div>
+    </a>
+    
+
+    <div class="flex flex-col items-center gap-3">
+        <div class="flex gap-2.5">
+            <a href={githubUrl} target="_blank">
+                <svg  class="w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-500 ease-out hover:-translate-y-2">
+					<use href="/spriteSVG/sprite.svg#github"></use>
+				</svg>
+            </a>
+            <a href={liveUrl} target="_blank">
+                <svg  class="w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-500 ease-out hover:-translate-y-2">
+					<use href="/spriteSVG/sprite.svg#world"></use>
+				</svg>
+            </a>
+        </div>
+    </div>
+
+</div>
