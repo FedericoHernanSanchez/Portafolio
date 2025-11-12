@@ -3,14 +3,15 @@ interface Props {
     title: string;
     href: string;
     icon?: string;
+    delay: number;
 }
 
-const { title, href, icon } = Astro.props;
+const { title, href, icon,delay } = Astro.props;
 ---
 
 <li class="relative group" >
-    <a href={href} class="flex w-3xs items-center lg:w-auto py-3 lg:px-5 gap-5 lg:gap-2 font-raleway text-xl font-medium text-white lg:text-slate-600
-    animate-fade-up animate-once animate-ease-in-out animate-delay-350 animate-duration-600 lg:animate-none">
+    <a href={href} style={`animation-delay: ${delay}ms`} class="flex w-3xs items-center lg:w-auto py-3 lg:px-5 gap-5 lg:gap-2 font-raleway text-xl font-medium text-white lg:text-slate-600
+    animate-fade-up animate-once animate-ease-in-out animate-duration-600 lg:animate-none">
         <svg class="w-9 h-9 lg:w-7 lg:h-7 text-fst" >
             <use href={`/spriteSVG/sprite.svg#${icon}`}></use>
         </svg>
