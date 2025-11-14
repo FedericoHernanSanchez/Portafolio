@@ -9,7 +9,7 @@ export const frontendSkills = [
 ];
 
 export const backendSkills = [
-  "Node.js",
+  "NodeJs",
   "MySQL",
   "Git"
 ];

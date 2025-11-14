@@ -1,4 +1,5 @@
 ---
+import { iconsSvg } from "../data/iconsSvg";
 import "../styles/global.css";
 ---
 
@@ -30,9 +31,7 @@ import "../styles/global.css";
 				</div>
 			</section>
 			<div class="flex justify-center gap-2.5 pt-7">
-				<svg class="w-7 h-7 text-snd">
-						<use href="/spriteSVG/sprite.svg#code"></use>
-				</svg>
+				<img src={iconsSvg["code"]} alt="icon-code" class="w-7 h-7 text-snd">
 				<p class="text-lg font-light opacity-0 animate-on-scroll sm:text-xl" data-anim="animate-fade animate-once- animate-duration-600 animate-delay-500 animate-ease-in">Federico Sanchez 2025</p>
 			</div>
 </footer>

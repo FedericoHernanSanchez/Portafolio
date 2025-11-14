@@ -1,4 +1,5 @@
 ---
+import { iconsSvg } from "../data/iconsSvg";
 import "../styles/global.css";
 
 interface Props {
@@ -15,9 +16,7 @@ const { title, iconsName } = Astro.props;
         {
             iconsName.map((icon) => (
                 <div class="div-icons">
-                    <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12">
-                        <use href={`/spriteSVG/sprite.svg#${icon}`} />
-                    </svg>
+                    <img src={iconsSvg[icon]} alt={icon} class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12">
                     <p class="text-sm ">{icon}</p>
                 </div>
             ))

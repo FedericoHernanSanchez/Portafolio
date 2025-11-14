@@ -1,4 +1,5 @@
 ---
+import { iconsSvg } from "../data/iconsSvg";
 import "../styles/global.css";
 import NavbarElement from "./NavbarElement.astro";
 ---
@@ -8,9 +9,7 @@ import NavbarElement from "./NavbarElement.astro";
 		id="menu-btn"
 		class="block z-50 relative lg:hidden rounded-full bg-white/70 backdrop-blur-3xl shadow-xl p-2 cursor-pointer"
 	>
-		<svg class="w-9 h-9 text-fst">
-			<use href="/spriteSVG/sprite.svg#menu"></use>
-		</svg>
+		<img src={iconsSvg["menu"]} alt="icono-menu" class="w-9 h-9">
 	</button>
 	<ul
 		id="menu"
@@ -37,7 +36,7 @@ import NavbarElement from "./NavbarElement.astro";
 			<NavbarElement
 				title="Tecnologias"
 				href="/#technologies"
-				icon="study-solid"
+				icon="study"
 				delay={400}
 			/>
 			<NavbarElement
@@ -61,18 +60,14 @@ import NavbarElement from "./NavbarElement.astro";
 				target="_blank"
 				class="hover:animate-jump animate-once animate-ease-in"
 			>
-				<svg class="w-13 h-13">
-					<use href="/spriteSVG/sprite.svg#github"></use>
-				</svg>
+				<img src={iconsSvg["github"]} alt="icon-github" class="w-13 h-13">
 			</a>
 			<a
 				href="https://www.linkedin.com/in/federico-hernan-sanchez-842b24214/"
 				target="_blank"
 				class="hover:animate-jump animate-once animate-ease-in"
 			>
-				<svg class="w-13 h-13">
-					<use href="/spriteSVG/sprite.svg#linkedIn"></use>
-				</svg>
+				<img src={iconsSvg["linkedin"]} alt="icon-linkedIn" class="w-13 h-13">
 			</a>
 		</div>
 	</ul>
