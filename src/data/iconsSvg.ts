@@ -1,6 +1,6 @@
 export const iconsSvg = {
-  HTML: "/icons/html.svg",
-  CSS: "/icons/css.svg",
+  Html: "/icons/html.svg",
+  Css: "/icons/css.svg",
   React: "/icons/react.svg",
   Tailwind: "/icons/tailwind.svg",
   JavaScript: "/icons/javascript.svg",
@@ -20,3 +20,4 @@ export const iconsSvg = {
   download: "/icons/download.svg",
   linkedin: "/icons/linkedIn.svg",
 };
+

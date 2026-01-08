@@ -5,44 +5,38 @@ import Footer from "../components/Footer.astro";
 import SkillsComponent from "../components/SkillsComponent.astro";
 import CardProyect from "../components/CardProyect.astro";
 import { projects } from "../data/proyects";
-import { frontendSkills, backendSkills } from "../data/skills";
+import { frontendSkills, backendSkills} from "../data/skills";
 import { iconsSvg } from "../data/iconsSvg";
 import "../styles/global.css";
 
-
-
-
-
-
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
 ---
-
-
 
 <Layout title="Portafolio - Federico Sanchez">
 	<header id="inicio"
-		class="h-dvh bg-[url('/fondo.webp')] bg-fixed bg-center flex justify-center items-center "
+		class="h-dvh bg-[url('/hero.png')] bg-fixed bg-center  bg-cover bg-no-repeat flex justify-center items-center "
 	>
 	
 		<Navbar />
 		<div  class="flex flex-col justify-center items-center p-4">
-			<div class="flex flex-col justify-center items-center font-raleway gap-2.5 text-slate-500">
+			<div class="flex flex-col justify-center items-center font-raleway gap-2.5 text-white">
 				<h3 class=" text-base font-medium sm:text-xl animate-fade-up animate-once animate-ease-in-out animate-delay-350 animate-duration-600">
 					Hola, soy Federico Sanchez
 				</h3>
-				<h1 class="text-6xl sm:text-7xl md:text-9xl font-extrabold bg-gradient-to-r from-fst via-indigo-400 to-snd bg-clip-text text-transparent  fade-gradient"> 
+				<h1 class="text-6xl sm:text-7xl md:text-9xl font-extrabold bg-gradient-to-r from-fst via-indigo-400 to-[#a641ff] bg-clip-text text-transparent  fade-gradient"> 
 					FrontEnd
 				</h1>
 				<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold animate-fade-up animate-once animate-ease-in-out animate-delay-1200 animate-duration-1600">
 					Developer
 				</h2>
-				<p  class="text-base sm:text-lg text-center md:text-xl pt-6   text-slate-500 font-medium animate-fade-up animate-once animate-ease-in-out animate-delay-3000 animate-duration-1600">
+				<p  class="text-base sm:text-lg text-center md:text-xl pt-6   text-white font-medium animate-fade-up animate-once animate-ease-in-out animate-delay-3000 animate-duration-1600">
 					Frontend-first, pero siempre listo para asumir cualquier desafío fullstack.
 				</p>
 			</div>
 
-			<div class="flex items-center justify-center gap-5 pt-10" >
+			<div class="flex items-center justify-center gap-5 pt-5" >
 				<a href="https://github.com/FedericoHernanSanchez " target="_blank" class="hover:animate-jump animate-once animate-ease-in"  > 
 					<img src={iconsSvg["github"]} alt="icon-github" class="w-13 h-13" />
 				</a>
@@ -54,30 +48,29 @@ import "../styles/global.css";
 	</header>
 
 	<main class="bg-background">
-		<section id="about" class=" mt-0 mx-auto mb-12 py-16 px-4 max-w-[950px] lg:px-8 ">
+		<section id="about" class=" mt-0 mx-auto mb-12 py-16 px-4 max-w-[1300px] lg:px-8 ">
 			<div class="text-white font-raleway flex flex-col">
 				<h2 class=" font-bold text-4xl py-5 my-7  after:mt-2  after:block after:w-20 after:h-1  after:bg-fst opacity-0 animate-on-scroll" data-anim="animate-fade-right animate-once animate-ease-out animate-duration-1500 animate-delay-400">
 					Sobre mí
 				</h2>
 			
-				<div class=" flex flex-col items-center justify-around gap-10 sm:text-center lg:flex-row lg:text-left">
+				<div class=" flex flex-col items-center justify-center gap-25 sm:text-center lg:flex-row lg:text-left">
 					<div class="relative w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] before:absolute before:-inset-[12px] before:rounded-full 
-     						before:border-3 before:border-transparent before:border-t-fst before:border-r-snd before:animate-spin before:animate-duration-2300 ">
+     						before:border-3 before:border-transparent before:border-t-fst before:border-r-[#a641ff] before:animate-spin before:animate-duration-2300 ">
   						<img src="/img-perfil.png" alt="imagen-perfil" class="w-full h-full object-cover rounded-full">
 					</div>
-					<div class="flex flex-col gap-8 text-base leading-8 md:w-2xl lg:w-lg ">
+					<div class="flex flex-col gap-5 text-base leading-8 md:w-2xl lg:w-[60%] ">
 						<h3 class="text-2xl font-bold text-fst">Hola,soy Federico</h3>
 						<p class="font-light ">
-							FrontEnd Developer con conocimientos FullStack. Me apasiona la programación y el desarollo de soluciones innovadoras. Me considero una persona que siempre da lo mejor de sí en todo lo que hace, 
-							con una gran capacidad para trabajar en equipo y alcanzar objetivos comunes.
+							FrontEnd Developer con 1 año de experiencia especializada  en React,creando interfaces web modernas y responsivas que brinden una excelente experiencia de usuario	  
 						</p>
 						<p class="font-light">
+							Poseo experiencia FullStack con Node.js y bases de datos SQL. Me destaco por el trabajo en equipo y la capacidad de adaptarme a nuevas tecnologías
 							<span class="opacity-0 animate-on-scroll" data-anim="animate-fade animate-once animate-duration-1300 animate-delay-800 animate-ease-in-out">
-								Finalicé los programas de  <span class="text-snd font-bold">Full Stack JavaScript/Node.js y React.js </span> de Talento Tech y actualmente estoy cursando la <span class="text-snd font-bold">Licenciatura en Informática</span> en la Universidad Nacional de Quilmes.
+								Finalicé los programas de  <span class="text-[#a641ff] font-semibold">Full Stack JavaScript/Node.js y React.js </span> de Talento Tech y actualmente estoy cursando el segundo año de la  <span class="text-[#a641ff] font-semibold">Licenciatura en Informática</span> en la Universidad Nacional de Quilmes.
 							</span> 
 							<span class="opacity-0 animate-on-scroll" data-anim="animate-fade animate-once animate-duration-1300 animate-delay-1200 animate-ease-in-out">
-								Sigo aprendiendo constantemente a través de cursos y de forma 
-								autodidacta para mejorar mis habilidades y seguir creciendo como profesional.
+								Complemento mi formacion con bootcamps/cursos  y aprendizaje continuo para mantenerme actualizada con las últimas tecnologías.
 							</span>
 						</p>
 					</div>
@@ -87,7 +80,7 @@ import "../styles/global.css";
 					<p class="my-2.5 text-sm leading-7 md:text-base">
 						Si estás interesado en conocer más sobre mi experiencia profesional y formación académica, puedes descargar mi Curriculum Vitae a continuación:
 					</p>
-					<a href="/CV-Federico-Sanchez.pdf" download class="flex items-center justify-center gap-3 bg-fst rounded-full px-4 py-3 md:px-7 bg-gradient-to-b from-fst to-snd hover:shadow-[0_4px_10px_var(--color-snd)] transition-shadow">
+					<a href="/CV-Federico-Sanchez.pdf" download class="flex items-center justify-center gap-3 rounded-full px-4 py-3 md:px-7 bg-gradient-to-b from-fst to-[#a641ff] hover:bg-none hover:border-2  hover:border-[#a641ff]  hover:shadow-[0_2px_14px_#a641ff] transition-all duration-100 ease-in-out">
 						<img src={iconsSvg["download"]} alt="icon-download" class="w-5 h-5 text-white" />
 						<span class="text-lg ">Descargar CV</span>
 					</a>
@@ -105,10 +98,10 @@ import "../styles/global.css";
 					<p>
 						HTML, CSS, JS, creación de aplicaciones web pequeñas y medianas con  React, complementos personalizados, funciones, animaciones y codificación de diseños interactivos.
 					</p>
-					<p class="py-3"> Visita mi <a class="text-fst hover:underline hover:text-snd hover:underline-offset-4 transition-all duration-250 ease-in-out" href="https://www.linkedin.com/in/federico-hernan-sanchez-842b24214/" target="_blank">LinkedIn</a> <span class="opacity-0 animate-on-scroll" data-anim="animate-fade animate-once animate-duration-1000 animate-ease-in-out animate-delay-1000">para más detalles.</span></p>
+					<p class="py-3"> Visita mi <a class="text-fst hover:underline hover:text-[#a641ff] hover:underline-offset-4 transition-all duration-250 ease-in-out" href="https://www.linkedin.com/in/federico-hernan-sanchez-842b24214/" target="_blank">LinkedIn</a> <span class="opacity-0 animate-on-scroll" data-anim="animate-fade animate-once animate-duration-1000 animate-ease-in-out animate-delay-1000">para más detalles.</span></p>
 				</div>
 
-				<div class="flex flex-col  gap-20 lg:flex-row">
+				<div class="flex flex-col gap-20 lg:flex-row">
 					<SkillsComponent title="FrontEnd" iconsName={frontendSkills}/>
 					<SkillsComponent title="BackEnd" iconsName={backendSkills}/>
 				</div>
@@ -116,15 +109,14 @@ import "../styles/global.css";
 
 		</section>
 		
-		<section id="proyects" class="flex justify-center items-center mx-auto mb-12 py-15 px-4 max-w-[1100px] md:px-8">
-			<div class="flex flex-col gap-15">
-				<div class="flex flex-col items-center font-raleway text-white gap-6" >
+		<section id="proyects" class="max-w-[1700px] mx-auto mb-12 py-15 px-4 md:px-8">
+			<div class="flex flex-col  items-center gap-15">
+				<div class="flex flex-col items-center font-raleway text-white " >
 					<h1 class="font-bold text-4xl py-2  after:mt-2 after:block after:w-24 after:h-1 after:bg-fst opacity-0 animate-on-scroll" data-anim="animate-fade-up animate-once animate-ease-out animate-duration-1500 animate-delay-400">
 						Proyectos
 					</h1>
-					<h3 class="font-light text-base text-center sm:text-lg">Proyectos realizados en cursos o personales</h3>
 				</div>
-				<div class="flex flex-col gap-25 lg:flex-row  ">
+				<div class="grid min-[600px]:grid-cols-2 min-[900px]:grid-cols-3 min-[1220px]:grid-cols-4 gap-7">
 					{projects.map(proyect => (
 						<CardProyect {...proyect}/>
 					))}
@@ -139,20 +131,20 @@ import "../styles/global.css";
 
 					<div class="div-form">
 						<label for="nombre" class="label-form">Nombre y Apellido</label>
-						<input type="text" id="nombre" name="nombre" placeholder="Federico Sanchez" class="input-form  focus:border-[var(--color-snd)]  focus:border-t-gray-700  focus:outline-none">
+						<input type="text" id="nombre" name="nombre" placeholder="Federico Sanchez" class="input-form  focus:border-[#a641ff]  focus:border-t-gray-700  focus:outline-none">
 						<p id="name-error" class="text-red-800 text-sm mt-1"></p>
 					</div>
 					
 					<div class="div-form">
 						<label for="email" class="label-form">Correo Electrónico</label>
-						<input type="email" id="email" name="email" placeholder="example@gmail.com" class="input-form focus:border-[var(--color-snd)]  focus:border-t-gray-700  focus:outline-none">
+						<input type="email" id="email" name="email" placeholder="example@gmail.com" class="input-form focus:border-[#a641ff]  focus:border-t-gray-700  focus:outline-none">
 						<p id="email-error" class="text-red-800 text-sm mt-1"></p>
 					</div>
 					<div class="div-form">
 						<label for="text" class="label-form">Mensaje</label>
-						<textarea name="text" id="text" placeholder="Escriba aquí su mensaje" class="input-form resize-none h-50 focus:border-[var(--color-snd)]  focus:border-t-gray-700  focus:outline-none " ></textarea>
+						<textarea name="text" id="text" placeholder="Escriba aquí su mensaje" class="input-form resize-none h-50 focus:border-[#a641ff]  focus:border-t-gray-700  focus:outline-none " ></textarea>
 					</div>
-					<button type="submit" class="font-bold text-xl rounded-lg bg-gradient-to-br from-fst to-snd p-2 cursor-pointer hover:shadow-[0_3px_8px_var(--color-snd)] transition-shadow">Enviar</button>
+					<button type="submit" class="font-bold mt-5 text-xl rounded-lg bg-gradient-to-br from-fst to-[#a641ff] p-2 cursor-pointer hover:shadow-[0_2px_12px_#a641ff] transition-all duration-300 ease-in-out">Enviar</button>
 					<p id="statusMessage" class="text-white mt-5 text-center text-lg"></p>
 				</form>
 			</div>

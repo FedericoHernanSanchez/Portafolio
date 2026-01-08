@@ -1,22 +1,22 @@
 ---
 import { iconsSvg } from '../data/iconsSvg';
-
+import type { IconName } from "../types/icons";
 
 interface Props {
     title: string;
     href: string;
-    icon: string;
+    icon: IconName;
     delay: number;
 }
 
 const { title, href, icon,delay } = Astro.props;
 ---
 
-<li class="relative group" >
-    <a href={href} style={`animation-delay: ${delay}ms`} class="flex w-3xs items-center lg:w-auto py-3 lg:px-5 gap-5 lg:gap-2 font-raleway text-xl font-medium text-white lg:text-slate-600
+<li class="relative group">
+    <a href={href} style={`animation-delay: ${delay}ms`} class="flex  items-center lg:w-auto py-3 lg:px-5 gap-5 lg:gap-2 font-raleway text-md text-white
     animate-fade-up animate-once animate-ease-in-out animate-duration-600 lg:animate-none">
         <img src={iconsSvg[icon]} alt={icon} class="w-9 h-9 lg:w-7 lg:h-7">
         {title}
     </a>
-    <span class="absolute left-0 h-0.5 w-0 bg-fst transition-all duration-700 group-hover:w-full"></span>
+    <span class="absolute left-0 h-0.5 w-0 bg-[#baafffff] transition-all duration-700 group-hover:w-full"></span>
 </li>

@@ -1,6 +1,8 @@
-export const frontendSkills = [
-  "HTML",
-  "CSS",
+import type { IconName } from "../types/icons";
+
+export const frontendSkills: IconName[] = [
+  "Html",
+  "Css",
   "JavaScript",
   "React",
   "Tailwind",
@@ -8,7 +10,7 @@ export const frontendSkills = [
   "Astro"
 ];
 
-export const backendSkills = [
+export const backendSkills: IconName[] = [
   "NodeJs",
   "MySQL",
   "Git"

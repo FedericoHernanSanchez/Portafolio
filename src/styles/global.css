@@ -8,7 +8,7 @@
   --color-background: #13151a;
   --color-fst: #667eea;
   --color-snd: #764ba2;
-  --color-via: ##7b6be3;
+  --color-via: #7b6be3;
   --anim-duration-slow: 2.5s;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .fade-gradient {
-  background-size: 200% auto;
+  background-size:200% auto;
   animation: gradient-move 8s ease-in-out infinite alternate,
     fade-up 1.6s ease-in-out 0.8s both;
 
