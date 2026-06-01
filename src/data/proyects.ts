@@ -15,5 +15,12 @@ export const projects = [
     githubUrl: "https://github.com/FedericoHernanSanchez/Proyecto.React",
     liveUrl: "https://react-proyect-23242c.netlify.app/"
   },
+  {
+    image: "/cientifica.png",
+    title: "Cientifica Central",
+    description: "Página de ventas de productos para laboratorios desarrollada con WordPress y Elementor durante una pasantía en la agencia Lader para un cliente del sector científico.",
+    technologies: ["Wordpress", "Elementor"],
+    liveUrl: "https://cientificacentra.lader.com.ar/"
+  }
   
 ];

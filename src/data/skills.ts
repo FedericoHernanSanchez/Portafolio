@@ -7,7 +7,9 @@ export const frontendSkills: IconName[] = [
   "React",
   "Tailwind",
   "TypeScript",
-  "Astro"
+  "Astro",
+  "Wordpress",
+  "Elementor"
 ];
 
 export const backendSkills: IconName[] = [

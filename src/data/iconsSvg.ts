@@ -19,5 +19,7 @@ export const iconsSvg = {
   menu: "/icons/menu.svg",
   download: "/icons/download.svg",
   linkedin: "/icons/linkedIn.svg",
+  Wordpress: "/icons/wordpress.svg",
+  Elementor: "/icons/elementor.svg"
 };
 
