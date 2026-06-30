@@ -20,6 +20,7 @@ export const projects = [
     title: "Cientifica Central",
     description: "Página de ventas de productos para laboratorios desarrollada con WordPress y Elementor durante una pasantía en la agencia Lader para un cliente del sector científico.",
     technologies: ["Wordpress", "Elementor"],
+    githubUrl: null,
     liveUrl: "https://cientificacentra.lader.com.ar/"
   }
   
