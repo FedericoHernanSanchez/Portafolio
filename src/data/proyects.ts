@@ -1,12 +1,12 @@
 export const projects = [
-  {
+  /*{
     image: "/zara.png",
     title: "Zara",
     description: "Pagina de ropa desarrollado como proyecto final del programa Desarrollador FullStack JavaScript/Node.js de Talento Tech.",
     technologies: ["HTML", "CSS", "JavaScript","Node.js","MySql"],
     githubUrl: "https://github.com/FedericoHernanSanchez/CaC-2024-Comision-24131-Grupo-14",
     liveUrl: "https://federicohernansanchez.github.io/CaC-2024-Comision-24131-Grupo-14/"
-  },
+  },*/
   {
     image: "/underground.png",
     title: "Underground",
