@@ -5,243 +5,517 @@ import Footer from "../components/Footer.astro";
 import SkillsComponent from "../components/SkillsComponent.astro";
 import CardProyect from "../components/CardProyect.astro";
 import { projects } from "../data/proyects";
-import { frontendSkills, backendSkills} from "../data/skills";
+import { frontendSkills, backendSkills } from "../data/skills";
 import { iconsSvg } from "../data/iconsSvg";
 import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
-
 ---
 
 <Layout title="Portafolio - Federico Sanchez">
-	<header id="inicio"
-		class="h-dvh bg-background bg-[url('/hero.webp')] bg-fixed bg-center  bg-cover bg-no-repeat flex justify-center items-center "
+	<!-- Hero -->
+	<header
+		id="inicio"
+		class="h-dvh bg-background bg-[url('/hero.webp')] bg-fixed bg-center bg-cover bg-no-repeat flex justify-center items-center"
 	>
-	
 		<Navbar />
-		<div  class="flex flex-col justify-center items-center p-4">
-			<div class="flex flex-col justify-center items-center font-raleway gap-2.5 text-white">
-				<h3 class=" text-base font-medium sm:text-xl animate-fade-up animate-once animate-ease-in-out animate-delay-350 animate-duration-600">
+		<div class="flex flex-col justify-center items-center p-4">
+			<div
+				class="flex flex-col justify-center items-center font-raleway gap-2.5 text-white"
+			>
+				<h3
+					class="text-base font-medium sm:text-xl animate-fade-up animate-once animate-ease-in-out animate-delay-350 animate-duration-600"
+				>
 					Hola, soy Federico Sanchez
 				</h3>
-				<h1 class="text-6xl sm:text-7xl md:text-9xl font-extrabold bg-gradient-to-r from-fst via-indigo-400 to-[#a641ff] bg-clip-text text-transparent  fade-gradient"> 
+				<h1
+					class="text-6xl sm:text-7xl md:text-9xl font-extrabold bg-gradient-to-r from-fst via-indigo-400 to-[#a641ff] bg-clip-text text-transparent fade-gradient"
+				>
 					FrontEnd
 				</h1>
-				<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold animate-fade-up animate-once animate-ease-in-out animate-delay-1200 animate-duration-1600">
+				<h2
+					class="text-3xl sm:text-4xl md:text-5xl font-extrabold animate-fade-up animate-once animate-ease-in-out animate-delay-1200 animate-duration-1600"
+				>
 					Developer
 				</h2>
-				<p  class="text-base sm:text-lg text-center md:text-xl pt-6   text-white font-medium animate-fade-up animate-once animate-ease-in-out animate-delay-3000 animate-duration-1600">
-					Frontend-first, pero siempre listo para asumir cualquier desafío fullstack.
+				<p
+					class="text-base sm:text-lg text-center md:text-xl pt-6 text-white font-medium animate-fade-up animate-once animate-ease-in-out animate-delay-3000 animate-duration-1600"
+				>
+					Frontend-first, pero siempre listo para asumir cualquier
+					desafío fullstack.
 				</p>
 			</div>
 
-			<div class="flex items-center justify-center gap-5 pt-5" >
-				<a href="https://github.com/FedericoHernanSanchez " target="_blank" class="hover:animate-jump animate-once animate-ease-in"  > 
-					<img src={iconsSvg["github"]} alt="icon-github" class="w-13 h-13" />
+			<div class="flex items-center justify-center gap-5 pt-5">
+				<a
+					href="https://github.com/FedericoHernanSanchez "
+					target="_blank"
+					class="hover:animate-jump animate-once animate-ease-in"
+				>
+					<img
+						src={iconsSvg["github"]}
+						alt="icon-github"
+						class="w-13 h-13"
+					/>
 				</a>
-				<a href="https://www.linkedin.com/in/federico-hernan-sanchez-842b24214/"  target="_blank" class="hover:animate-jump animate-once  animate-ease-in">
-					<img src={iconsSvg["linkedin"]} alt="icon-linkedIn" class="w-13 h-13" />
+				<a
+					href="https://www.linkedin.com/in/federico-hernan-sanchez-842b24214/"
+					target="_blank"
+					class="hover:animate-jump animate-once animate-ease-in"
+				>
+					<img
+						src={iconsSvg["linkedin"]}
+						alt="icon-linkedIn"
+						class="w-13 h-13"
+					/>
 				</a>
 			</div>
 		</div>
 	</header>
 
 	<main class="bg-background">
-		<section id="about" class=" mt-0 mx-auto mb-12 py-16 px-4 max-w-[1300px] lg:px-8 ">
+		<!-- Experiencia -->
+		<section id="experience" class="max-w-[1700px] mx-auto py-15 md:px-8">
+			<h1
+				class="font-raleway text-white font-bold text-4xl py-8 after:mt-2 after:block after:w-24 after:h-1 after:bg-fst opacity-0 animate-on-scroll"
+				data-anim="animate-fade-up animate-once animate-ease-out animate-duration-1500 animate-delay-400"
+			>
+				Experiencia
+			</h1>
+
+			<ol class="relative border-l-2 pt-5 border-pink-500/50">
+
+  <!-- Experiencia 1 -->
+  <li class="mb-12 ml-10">
+    <span
+      class="absolute -left-[9px] mt-1 w-4 h-4 rounded-full bg-pink-500 shadow-[0_0_20px_5px_rgba(236,72,153,.6)]"
+    ></span>
+
+    <div class="rounded-lg p-[1px] bg-gradient-to-r from-purple-500 via-fst to-snd">
+      <div class="bg-[#121418] rounded-lg">
+
+        <article class="toggle cursor-pointer p-6">
+          <h3 class="text-white font-semibold text-lg">
+            Web Developer (WordPress/Elementor)
+          </h3>
+
+          <p class="text-gray-300">
+            Agencia Lader - Pasantía profesional
+          </p>
+
+          <time class="text-gray-400 text-sm">
+            Febrero 2026 - Junio 2026
+          </time>
+        </article>
+
+        <div class="experience-content">
+          <ul class="px-6 font-extralight text-base font-raleway pb-6  list-disc ml-5 text-white space-y-2">
+            <li>Desarrollo de una Landing Page utilizando WordPress y Elementor.</li>
+            <li>Soporte y mantenimiento de sitios web existentes.</li>
+            <li>Optimización del diseño responsive para distintos dispositivos.</li>
+            <li>Integración y configuración de formularios y plugins de WordPress.</li>
+            <li>Implementación de mejoras básicas de SEO (optimización on-page).</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </li>
+
+  <!-- Experiencia 2 -->
+  <li class="ml-10">
+    <span
+      class="absolute -left-[9px] mt-1 w-4 h-4 rounded-full bg-pink-500 shadow-[0_0_20px_5px_rgba(236,72,153,.6)]"
+    ></span>
+
+    <div class="rounded-lg p-[1px] bg-gradient-to-r from-purple-500 via-fst to-snd">
+      <div class="bg-[#121418] rounded-lg">
+
+        <article class="toggle cursor-pointer p-6">
+          <h3 class="text-white font-semibold text-lg">
+            FullStack Developer
+          </h3>
+
+          <p class="text-gray-300">HermanosCode</p>
+
+          <time class="text-gray-400 text-sm">
+            Noviembre 2023 - Noviembre 2024
+          </time>
+        </article>
+
+        <div class="experience-content">
+          <ul class="px-6 font-extralight text-base font-raleway pb-6  list-disc ml-5 text-white space-y-2">
+            <li>Desarrollo de la interfaz de usuario con React.</li>
+            <li>Desarrollo del backend utilizando Node.js y Express.</li>
+            <li>Diseño e implementación de APIs REST.</li>
+            <li>Integración con bases de datos SQL.</li>
+			<li>Implementación de funcionalidades CRUD.</li>
+			<li>Desarrollo de interfaces responsive para múltiples dispositivos.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </li>
+
+</ol>
+		</section>
+
+		<!-- Proyectos -->
+		<section
+			id="proyects"
+			class="max-w-[1700px] mx-auto mb-12 py-15 px-4 md:px-8"
+		>
+			<div class="flex flex-col items-center gap-15">
+				<div class="flex flex-col items-center font-raleway text-white">
+					<h1
+						class="font-bold text-4xl py-2 after:mt-2 after:block after:w-24 after:h-1 after:bg-fst opacity-0 animate-on-scroll"
+						data-anim="animate-fade-up animate-once animate-ease-out animate-duration-1500 animate-delay-400"
+					>
+						Proyectos
+					</h1>
+				</div>
+				<div
+					class="grid min-[600px]:grid-cols-2 min-[900px]:grid-cols-3 min-[1220px]:grid-cols-4 gap-7"
+				>
+					{projects.map((proyect) => <CardProyect {...proyect} />)}
+				</div>
+			</div>
+		</section>
+
+		<!-- Tecnologías -->
+		<section
+			id="technologies"
+			class="mt-0 mx-auto mb-12 py-8 px-4 max-w-[1100px] md:px-8"
+		>
+			<div
+				class="flex flex-col items-center justify-center text-white font-raleway gap-25"
+			>
+				<div
+					class="flex flex-col items-center gap-3 text-base text-center leading-8 sm:text-xl lg:max-w-[950px]"
+				>
+					<h1
+						class="font-bold text-4xl py-5 my-5 after:mt-2 after:block after:w-27 after:h-1 after:bg-fst opacity-0 animate-on-scroll"
+						data-anim="animate-fade-down animate-once animate-ease-out animate-duration-1500 animate-delay-400"
+					>
+						Tecnologias
+					</h1>
+					<p>
+						Mi área principal de especialización es el desarrollo
+						Frontend pero mi formación es FullStack.
+					</p>
+					<p>
+						HTML, CSS, JavaScript, React, Node.js, SQL, WordPress y
+						Elementor, desarrollando aplicaciones web, sitios
+						corporativos, landing pages e interfaces modernas e
+						interactivas.
+					</p>
+					<p class="py-3">
+						Visita mi <a
+							class="text-fst hover:underline hover:text-[#a641ff] hover:underline-offset-4 transition-all duration-250 ease-in-out"
+							href="https://www.linkedin.com/in/federico-hernan-sanchez-842b24214/"
+							target="_blank">LinkedIn</a
+						>
+						<span
+							class="opacity-0 animate-on-scroll"
+							data-anim="animate-fade animate-once animate-duration-1000 animate-ease-in-out animate-delay-1000"
+							>para más detalles.</span
+						>
+					</p>
+				</div>
+
+				<div class="flex flex-col gap-20 lg:flex-row">
+					<SkillsComponent
+						title="FrontEnd"
+						iconsName={frontendSkills}
+					/>
+					<SkillsComponent
+						title="BackEnd"
+						iconsName={backendSkills}
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- Sobre mi -->
+		<section
+			id="about"
+			class="mt-0 mx-auto mb-12 py-8 px-4 max-w-[1300px] lg:px-8"
+		>
 			<div class="text-white font-raleway flex flex-col">
-				<h2 class=" font-bold text-4xl py-5 my-7  after:mt-2  after:block after:w-20 after:h-1  after:bg-fst opacity-0 animate-on-scroll" data-anim="animate-fade-right animate-once animate-ease-out animate-duration-1500 animate-delay-400">
+				<h2
+					class="font-bold text-4xl py-5 my-7 after:mt-2 after:block after:w-20 after:h-1 after:bg-fst opacity-0 animate-on-scroll"
+					data-anim="animate-fade-right animate-once animate-ease-out animate-duration-1500 animate-delay-400"
+				>
 					Sobre mí
 				</h2>
-			
-				<div class=" flex flex-col items-center justify-center gap-25 sm:text-center lg:flex-row lg:text-left">
-					<div class="relative w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] before:absolute before:-inset-[12px] before:rounded-full 
-     						before:border-3 before:border-transparent before:border-t-fst before:border-r-[#a641ff] before:animate-spin before:animate-duration-2300 ">
-  						<img src="/img-perfil.png" alt="imagen-perfil" class="w-full h-full object-cover rounded-full">
+
+				<div
+					class="flex flex-col items-center justify-center gap-25 sm:text-center lg:flex-row lg:text-left"
+				>
+					<div
+						class="relative w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] before:absolute before:-inset-[12px] before:rounded-full
+     						before:border-3 before:border-transparent before:border-t-fst before:border-r-[#a641ff] before:animate-spin before:animate-duration-2300"
+					>
+						<img
+							src="/img-perfil.png"
+							alt="imagen-perfil"
+							class="w-full h-full object-cover rounded-full"
+						/>
 					</div>
-					<div class="flex flex-col gap-5 text-base leading-8 md:w-2xl lg:w-[60%] ">
-						<h3 class="text-2xl font-bold text-fst">Hola,soy Federico</h3>
-						<p class="font-light ">
-							Frontend Developer con 1 año de experiencia especializado en React, creando interfaces web modernas, responsivas y centradas en la experiencia de usuario.	  
+					<div
+						class="flex flex-col gap-5 text-base leading-8 md:w-2xl lg:w-[60%]"
+					>
+						<h3 class="text-2xl font-bold text-fst">
+							Hola,soy Federico
+						</h3>
+						<p class="font-light">
+							Frontend Developer con 1 año de experiencia
+							especializado en React, creando interfaces web
+							modernas, responsivas y centradas en la experiencia
+							de usuario.
 						</p>
 						<p class="font-light">
-							Cuento con formación Full Stack utilizando Node.js y bases de datos SQL, además de experiencia en desarrollo web con WordPress y Elementor adquirida durante una pasantía profesional en la agencia Lader.
-							<span class="opacity-0 animate-on-scroll" data-anim="animate-fade animate-once animate-duration-1300 animate-delay-800 animate-ease-in-out">
-								Finalicé los programas de  <span class="text-[#a641ff] font-semibold">Full Stack JavaScript/Node.js y React.js </span> de Talento Tech y actualmente estoy cursando el segundo año de la  <span class="text-[#a641ff] font-semibold">Licenciatura en Informática</span> en la Universidad Nacional de Quilmes.
-							</span> 
-							<span class="opacity-0 animate-on-scroll" data-anim="animate-fade animate-once animate-duration-1300 animate-delay-1200 animate-ease-in-out">
-								Complemento mi formacion con bootcamps/cursos  y aprendizaje continuo para mantenerme actualizada con las últimas tecnologías.
+							Cuento con formación Full Stack utilizando Node.js y
+							bases de datos SQL, además de experiencia en
+							desarrollo web con WordPress y Elementor adquirida
+							durante una pasantía profesional en la agencia
+							Lader.
+							<span
+								class="opacity-0 animate-on-scroll"
+								data-anim="animate-fade animate-once animate-duration-1300 animate-delay-800 animate-ease-in-out"
+							>
+								Finalicé los programas de <span
+									class="text-[#a641ff] font-semibold"
+									>Full Stack JavaScript/Node.js y React.js
+								</span> de Talento Tech y actualmente estoy cursando
+								el segundo año de la <span
+									class="text-[#a641ff] font-semibold"
+									>Licenciatura en Informática</span
+								> en la Universidad Nacional de Quilmes.
+							</span>
+							<span
+								class="opacity-0 animate-on-scroll"
+								data-anim="animate-fade animate-once animate-duration-1300 animate-delay-1200 animate-ease-in-out"
+							>
+								Complemento mi formacion con bootcamps/cursos y
+								aprendizaje continuo para mantenerme actualizada
+								con las últimas tecnologías.
 							</span>
 						</p>
 					</div>
 				</div>
 
-				<div class="flex flex-col justify-center items-center text-center gap-5 pt-13 ">
+				<div
+					class="flex flex-col justify-center items-center text-center gap-5 pt-13"
+				>
 					<p class="my-2.5 text-sm leading-7 md:text-base">
-						Si estás interesado en conocer más sobre mi experiencia profesional y formación académica, puedes descargar mi Curriculum Vitae a continuación:
+						Si estás interesado en conocer más sobre mi experiencia
+						profesional y formación académica, puedes descargar mi
+						Curriculum Vitae a continuación:
 					</p>
-					<a href="/CV-Federico Hernan Sanchez.pdf" download class="flex items-center justify-center gap-3 rounded-full px-4 py-3 md:px-7 bg-gradient-to-b from-fst to-[#a641ff] hover:bg-none hover:border-2  hover:border-[#a641ff]  hover:shadow-[0_2px_14px_#a641ff] transition-all duration-100 ease-in-out">
-						<img src={iconsSvg["download"]} alt="icon-download" class="w-5 h-5 text-white" />
-						<span class="text-lg ">Descargar CV</span>
+					<a
+						href="/CV-Federico Hernan Sanchez.pdf"
+						download
+						class="flex items-center justify-center gap-3 rounded-full px-4 py-3 md:px-7 bg-gradient-to-b from-fst to-[#a641ff] hover:bg-none hover:border-2 hover:border-[#a641ff] hover:shadow-[0_2px_14px_#a641ff] transition-all duration-100 ease-in-out"
+					>
+						<img
+							src={iconsSvg["download"]}
+							alt="icon-download"
+							class="w-5 h-5 text-white"
+						/>
+						<span class="text-lg">Descargar CV</span>
 					</a>
 				</div>
-				
 			</div>
 		</section>
 
-		<section id="technologies" class=" mt-0 mx-auto mb-12 py-16 px-4 max-w-[1100px] md:px-8">
-
-			<div class="flex flex-col  items-center justify-center text-white font-raleway gap-25">
-				<div class=" flex flex-col  items-center gap-3 text-base  text-center leading-8  sm:text-xl lg:max-w-[950px] ">
-					<h1 class="font-bold text-4xl py-5 my-5 after:mt-2 after:block after:w-27 after:h-1 after:bg-fst opacity-0 animate-on-scroll" data-anim="animate-fade-down animate-once animate-ease-out animate-duration-1500 animate-delay-400">Tecnologias</h1>
-					<p>Mi área principal de especialización es el desarrollo Frontend pero mi formación es FullStack.</p>
-					<p>
-						HTML, CSS, JavaScript, React, Node.js, SQL, WordPress y Elementor, desarrollando aplicaciones web, sitios corporativos, landing pages e interfaces modernas e interactivas.
-					</p>
-					<p class="py-3"> Visita mi <a class="text-fst hover:underline hover:text-[#a641ff] hover:underline-offset-4 transition-all duration-250 ease-in-out" href="https://www.linkedin.com/in/federico-hernan-sanchez-842b24214/" target="_blank">LinkedIn</a> <span class="opacity-0 animate-on-scroll" data-anim="animate-fade animate-once animate-duration-1000 animate-ease-in-out animate-delay-1000">para más detalles.</span></p>
-				</div>
-
-				<div class="flex flex-col gap-20 lg:flex-row">
-					<SkillsComponent title="FrontEnd" iconsName={frontendSkills}/>
-					<SkillsComponent title="BackEnd" iconsName={backendSkills}/>
-				</div>
-			</div>
-
-		</section>
+		<!-- Contacto -->
+		<section
+			id="contact"
+			class="mx-auto mb-12 py-8 px-4 max-w-[950px] font-raleway text-white md:px-8"
+		>
 		
-		<section id="proyects" class="max-w-[1700px] mx-auto mb-12 py-15 px-4 md:px-8">
-			<div class="flex flex-col  items-center gap-15">
-				<div class="flex flex-col items-center font-raleway text-white " >
-					<h1 class="font-bold text-4xl py-2  after:mt-2 after:block after:w-24 after:h-1 after:bg-fst opacity-0 animate-on-scroll" data-anim="animate-fade-up animate-once animate-ease-out animate-duration-1500 animate-delay-400">
-						Proyectos
-					</h1>
-				</div>
-				<div class="grid min-[600px]:grid-cols-2 min-[900px]:grid-cols-3 min-[1220px]:grid-cols-4 gap-7">
-					{projects.map(proyect => (
-						<CardProyect {...proyect}/>
-					))}
-				</div>
-			</div>
-		</section>
-
-		<section id="contact" class="mx-auto mb-12 py-14 px-4  max-w-[950px] font-raleway text-white md:px-8">
-			<div class="flex flex-col  mb-30 md:items-center">
-				<h1 class="font-bold text-4xl my-7 py-3.5 animate-on-scroll after:block after:w-20 after:mt-2 after:h-1 after:bg-fst opacity-0 " data-anim="animate-fade-right animate-once animate-ease-out animate-duration-1500 animate-delay-400">Contáctame</h1>
-				<form action="https://formspree.io/f/xeorzbej" id="form" method="post" class="flex flex-col gap-7 w-[100%] md:w-[75%] lg:w-[55%]">
-
+			<div class="flex flex-col mb-30 md:items-center">
+				<h1
+					class="font-bold text-4xl my-7 py-3.5 animate-on-scroll after:block after:w-20 after:mt-2 after:h-1 after:bg-fst opacity-0"
+					data-anim="animate-fade-right animate-once animate-ease-out animate-duration-1500 animate-delay-400"
+				>
+					Contáctame
+				</h1>
+				<p class="text-base font-light text-center pb-12">
+					Si creés que podemos trabajar juntos, escribime un mensaje. Puede ser el inicio de algo grande.
+				</p>
+				<form
+					action="https://formspree.io/f/xeorzbej"
+					id="form"
+					method="post"
+					class="flex flex-col gap-7 w-[100%] md:w-[75%] lg:w-[55%]"
+				>
 					<div class="div-form">
-						<label for="nombre" class="label-form">Nombre y Apellido</label>
-						<input type="text" id="nombre" name="nombre" placeholder="Federico Sanchez" class="input-form  focus:border-[#a641ff]  focus:border-t-gray-700  focus:outline-none">
-						<p id="name-error" class="text-red-800 text-sm mt-1"></p>
+						<label for="nombre" class="label-form"
+							>Nombre y Apellido</label
+						>
+						<input
+							type="text"
+							id="nombre"
+							name="nombre"
+							placeholder="Federico Sanchez"
+							class="input-form focus:border-[#a641ff] focus:border-t-gray-700 focus:outline-none"
+						/>
+						<p id="name-error" class="text-red-800 text-sm mt-1">
+						</p>
 					</div>
-					
+
 					<div class="div-form">
-						<label for="email" class="label-form">Correo Electrónico</label>
-						<input type="email" id="email" name="email" placeholder="example@gmail.com" class="input-form focus:border-[#a641ff]  focus:border-t-gray-700  focus:outline-none">
-						<p id="email-error" class="text-red-800 text-sm mt-1"></p>
+						<label for="email" class="label-form"
+							>Correo Electrónico</label
+						>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="example@gmail.com"
+							class="input-form focus:border-[#a641ff] focus:border-t-gray-700 focus:outline-none"
+						/>
+						<p id="email-error" class="text-red-800 text-sm mt-1">
+						</p>
 					</div>
 					<div class="div-form">
 						<label for="text" class="label-form">Mensaje</label>
-						<textarea name="text" id="text" placeholder="Escriba aquí su mensaje" class="input-form resize-none h-50 focus:border-[#a641ff]  focus:border-t-gray-700  focus:outline-none " ></textarea>
+						<textarea
+							name="text"
+							id="text"
+							placeholder="Escriba aquí su mensaje"
+							class="input-form resize-none h-50 focus:border-[#a641ff] focus:border-t-gray-700 focus:outline-none"
+						></textarea>
 					</div>
-					<button type="submit" class="font-bold mt-5 text-xl rounded-lg bg-gradient-to-br from-fst to-[#a641ff] p-2 cursor-pointer hover:shadow-[0_2px_12px_#a641ff] transition-all duration-300 ease-in-out">Enviar</button>
-					<p id="statusMessage" class="text-white mt-5 text-center text-lg"></p>
+					<button
+						type="submit"
+						class="font-bold mt-5 text-xl rounded-lg bg-gradient-to-br from-fst to-[#a641ff] p-2 cursor-pointer hover:shadow-[0_2px_12px_#a641ff] transition-all duration-300 ease-in-out"
+						>Enviar</button
+					>
+					<p
+						id="statusMessage"
+						class="text-white mt-5 text-center text-lg"
+					>
+					</p>
 				</form>
 			</div>
 		</section>
 
-		<Footer/>
+		<Footer />
 	</main>
 </Layout>
 
-
 <script>
+
+	 document.querySelectorAll(".toggle").forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const collapse = toggle.nextElementSibling as HTMLElement | null;
+
+      if (!collapse) return;
+
+      if (collapse.style.maxHeight && collapse.style.maxHeight !== "0px") {
+        collapse.style.maxHeight = "0px";
+      } else {
+        collapse.style.maxHeight = collapse.scrollHeight + "px";
+      }
+    });
+  });
+
 	// Animacion Scroll
-	const observer = new IntersectionObserver((entries,obs) =>{
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				const target = entry.target as HTMLElement;
-				const animClasses =target.dataset.anim?.split(' ') || [];
-				entry.target.classList.add(...animClasses);
-				obs.unobserve(entry.target)
-			}
-		});
-	},{threshold:0.5})
+	const observer = new IntersectionObserver(
+		(entries, obs) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					const target = entry.target as HTMLElement;
+					const animClasses = target.dataset.anim?.split(" ") || [];
+					entry.target.classList.add(...animClasses);
+					obs.unobserve(entry.target);
+				}
+			});
+		},
+		{ threshold: 0.5 },
+	);
 
-	document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-
+	document
+		.querySelectorAll(".animate-on-scroll")
+		.forEach((el) => observer.observe(el));
 
 	//Validación formulario
-	const form= document.getElementById("form") as HTMLFormElement;
-	const nombre= document.getElementById("nombre") as HTMLInputElement;
+	const form = document.getElementById("form") as HTMLFormElement;
+	const nombre = document.getElementById("nombre") as HTMLInputElement;
 	const email = document.getElementById("email") as HTMLInputElement;
-	
+
 	const errorNombre = document.getElementById("name-error") as HTMLElement;
-	const errorEmail = document.getElementById("email-error")as HTMLElement;
-	const statusMessage = document.getElementById('statusMessage')as HTMLElement;
+	const errorEmail = document.getElementById("email-error") as HTMLElement;
+	const statusMessage = document.getElementById(
+		"statusMessage",
+	) as HTMLElement;
 
 	const nombreRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
 	const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-
-	function showError(element : HTMLElement,message :string) {
+	function showError(element: HTMLElement, message: string) {
 		element.textContent = message;
 		element.classList.remove("hidden");
 	}
 
 	function clearError(element: HTMLElement) {
-  		element.textContent = "";
-  		element.classList.add("hidden");
+		element.textContent = "";
+		element.classList.add("hidden");
 	}
 
-	
-
-
-	form?.addEventListener("submit",async (e) =>{
+	form?.addEventListener("submit", async (e) => {
 		e.preventDefault();
-		let valid = true 
+		let valid = true;
 
-
-
-	// Validar nombre
-  		const valorNombre = nombre.value.trim();
-  			if (valorNombre === "" || !nombreRegex.test(valorNombre)) {
-    			showError(errorNombre, "El campo no puede estar vacío y solo puede contener letras");
-    			valid = false;
- 			 }else {
-    			clearError(errorNombre);
-  			}
-
-  // Validar email
-  		const valorEmail = email.value.trim();
-  			if (valorEmail === "" || !emailPattern.test(valorEmail)) {
-    			showError(errorEmail, "Ingresa un correo electrónico válido");
-    			valid = false;
-  			} else {
-    		clearError(errorEmail);
-  		}
-
-	if(!valid) return;
-
-	//Enviar datos a Formspree
-	const formData = new FormData(form)
-	try{
-		const response = await fetch('https://formspree.io/f/xeorzbej', {
-    		method: 'POST',
-    		body: formData,
-    		headers: { 'Accept': 'application/json' }
-  		});
-
-		if(response.ok){
-			statusMessage.textContent = "¡Gracias! Tu mensaje fue enviado"
-			form.reset();
-			setTimeout(() => statusMessage.classList.add('hidden'),8000)
+		// Validar nombre
+		const valorNombre = nombre.value.trim();
+		if (valorNombre === "" || !nombreRegex.test(valorNombre)) {
+			showError(
+				errorNombre,
+				"El campo no puede estar vacío y solo puede contener letras",
+			);
+			valid = false;
 		} else {
-			statusMessage.textContent = "No se logro enviar el mensaje, inténtelo mas tarde"
+			clearError(errorNombre);
 		}
-	} catch (error){
-			statusMessage.textContent = 'No se pudo enviar el mensaje, inténtelo más tarde.';
-  			console.error(error);
-	}
-})
+
+		// Validar email
+		const valorEmail = email.value.trim();
+		if (valorEmail === "" || !emailPattern.test(valorEmail)) {
+			showError(errorEmail, "Ingresa un correo electrónico válido");
+			valid = false;
+		} else {
+			clearError(errorEmail);
+		}
+
+		if (!valid) return;
+
+		//Enviar datos a Formspree
+		const formData = new FormData(form);
+		try {
+			const response = await fetch("https://formspree.io/f/xeorzbej", {
+				method: "POST",
+				body: formData,
+				headers: { Accept: "application/json" },
+			});
+
+			if (response.ok) {
+				statusMessage.textContent = "¡Gracias! Tu mensaje fue enviado";
+				form.reset();
+				setTimeout(() => statusMessage.classList.add("hidden"), 8000);
+			} else {
+				statusMessage.textContent =
+					"No se logro enviar el mensaje, inténtelo mas tarde";
+			}
+		} catch (error) {
+			statusMessage.textContent =
+				"No se pudo enviar el mensaje, inténtelo más tarde.";
+			console.error(error);
+		}
+	});
 </script>

@@ -12,6 +12,7 @@ export const iconsSvg = {
   world: "/icons/world.svg",
   github: "/icons/github.svg",
   house: "/icons/house.svg",
+  tools: "/icons/tools.svg",
   study: "/icons/study.svg",
   code: "/icons/code.svg",
   send: "/icons/send.svg",

@@ -34,6 +34,14 @@
   }
 }
 
+.experience-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .4s ease;
+}
+
+
+
 .fade-gradient {
   background-size:200% auto;
   animation: gradient-move 8s ease-in-out infinite alternate,
