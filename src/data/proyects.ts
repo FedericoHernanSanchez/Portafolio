@@ -1,12 +1,13 @@
 export const projects = [
-  /*{
-    image: "/zara.png",
-    title: "Zara",
-    description: "Pagina de ropa desarrollado como proyecto final del programa Desarrollador FullStack JavaScript/Node.js de Talento Tech.",
-    technologies: ["HTML", "CSS", "JavaScript","Node.js","MySql"],
-    githubUrl: "https://github.com/FedericoHernanSanchez/CaC-2024-Comision-24131-Grupo-14",
-    liveUrl: "https://federicohernansanchez.github.io/CaC-2024-Comision-24131-Grupo-14/"
-  },*/
+  {
+    image: "/lader.png",
+    title: "Agencia Lader",
+    description: "Réplica de un sitio web desarrollada con WordPress como desafío técnico para una postulación a pasantías. El proyecto consistió en recrear fielmente el diseño y la experiencia de usuario, utilizando Elementor, CSS personalizado y buenas prácticas de diseño responsive.",
+    technologies: ["Wordpress", "Elementor"],
+    githubUrl: null,
+    liveUrl: "https://proyectf.infinityfreeapp.com/",
+    status: "Finalizado"
+  },
   {
     image: "/underground.png",
     title: "Underground",
