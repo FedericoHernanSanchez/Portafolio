@@ -15,7 +15,7 @@ export const projects = [
     technologies: ["HTML", "CSS","React"],
     githubUrl: "https://github.com/FedericoHernanSanchez/Proyecto.React",
     liveUrl: "https://react-proyect-23242c.netlify.app/",
-    status: "En progreso"
+    status: "Finalizado"
   },
   {
     image: "/cientifica.png",
