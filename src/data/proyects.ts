@@ -34,6 +34,15 @@ export const projects = [
     githubUrl: "https://github.com/FedericoHernanSanchez/PokedexLite",
     liveUrl: "https://pokedex-lite-rust-chi.vercel.app/",
     status: "Finalizado"
+  },
+  {
+    image: "/",
+    title: "Woocomerce",
+    description: "Desarrollo de una tienda e-commerce utilizando WordPress, Elementor y WooCommerce. El proyecto se encuentra actualmente en proceso de desarrollo, trabajando en la estructura, diseño y configuración de la tienda y sus funcionalidades.",
+    technologies: ["Wordpress", "Elementor","Woocomerce"],
+    githubUrl: "",
+    liveUrl: "",
+    status: "En proceso"
   }
   
 ];
