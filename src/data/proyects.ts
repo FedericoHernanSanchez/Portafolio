@@ -25,6 +25,15 @@ export const projects = [
     githubUrl: null,
     liveUrl: "https://cientificacentra.lader.com.ar/",
     status: "Finalizado"
+  },
+  {
+    image: "/Pokedex.png",
+    title: "PokedexLite",
+    description: "Aplicación web interactiva desarrollada con React que permite consultar y explorar información de diferentes Pokémon, consumiendo datos de la PokeAPI de forma dinámica",
+    technologies: ["React", "Tailwind","JavaScript"],
+    githubUrl: "https://github.com/FedericoHernanSanchez/PokedexLite",
+    liveUrl: "https://pokedex-lite-rust-chi.vercel.app/",
+    status: "Finalizado"
   }
   
 ];
