@@ -36,7 +36,7 @@ export const projects = [
     status: "Finalizado"
   },
   {
-    image: "/",
+    image: "/placeholder.png",
     title: "Woocomerce",
     description: "Desarrollo de una tienda e-commerce utilizando WordPress, Elementor y WooCommerce. El proyecto se encuentra actualmente en proceso de desarrollo, trabajando en la estructura, diseño y configuración de la tienda y sus funcionalidades.",
     technologies: ["Wordpress", "Elementor","Woocomerce"],
